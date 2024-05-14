@@ -25,6 +25,12 @@ namespace RestaurantAPI.Entities
                 .Property(d => d.Price)
                 .IsRequired()
                 .HasColumnType("decimal(4,2)");
+
+            modelBuilder.Entity<Dish>()
+                .Property(d => d.Description)
+                .IsRequired(false);
+                
+
             modelBuilder.Entity<Address>()
                 .Property(a => a.City)
                 .IsRequired()
